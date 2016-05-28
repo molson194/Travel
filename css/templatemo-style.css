@@ -1,0 +1,239 @@
+body {
+	background: #f8f8f8;
+	color: #606060;
+	font-family: 'Proxima', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	position: relative;
+}
+html, body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
+	text-align: center;
+	vertical-align: middle;
+}
+ul
+{
+    list-style-type: none;
+    margin:0;
+    padding-top:10px;
+    padding-left:0px;
+}
+a {
+	color: #000000;
+}
+@font-face {
+	font-family: 'Proxima';
+	src: url(../fonts/ProximaNova-Regular.otf);
+}
+@font-face {
+	font-family: 'Proxima Bold';
+	src: url(../fonts/ProximaNova-Bold.otf);
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Proxima Bold";
+	font-weight: bold;
+}
+p {
+	letter-spacing: 1px;
+	line-height: 28px;
+}
+hr {
+	border-color: #e0e0e0;
+	margin: 0 auto 20px auto;
+	width: 100px !important;
+}
+h1 {
+	font-size: 60px;
+}
+h2 {
+	font-size: 48px;
+}
+h3 {
+	font-size: 30px;
+}
+h4 {
+	font-size: 24px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+.title {
+	padding-bottom: 40px;
+}
+.title h2 {
+	color: #202020;
+	line-height: 20px;
+	padding-bottom: 30px;
+}
+.title p {
+	padding-top: 14px;
+	padding-bottom: 10px;
+}
+.parallax-section {
+	background-attachment: fixed !important;
+	background-size: cover !important;
+}
+/* preloader section */
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: row nowrap;
+	-ms-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	background: none repeat scroll 0 0 #fff;
+	background: none repeat scroll 0 0 #f9f9f9;
+}
+.sk-spinner-rotating-plane.sk-spinner {
+	width: 40px;
+	height: 40px;
+	background-color: black;
+	border-radius: 50%;
+	-webkit-animation: sk-rotatePlane 1.2s infinite ease-in-out;
+	animation: sk-rotatePlane 1.2s infinite ease-in-out;
+}
+@keyframes sk-rotatePlane {
+0% {
+-webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+}
+50% {
+-webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+}
+100% {
+-webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+}
+}
+/* menu and flyout*/
+#menuwrapper{
+	float:left; position: fixed; height:100%;
+	padding-top: 20px;
+	background:#f2f2f2;
+    font-weight: bold;
+    height:100%;
+}
+#menuwrapper div {
+	width:110px;
+}
+
+#flyout{
+	padding-top: 30px;
+	left: 110px;
+	top:0px;
+	position:absolute;
+	visibility:hidden;
+	display:none;
+    height:100%;
+    z-index: 3;
+    background-color:#000000;
+}
+#flyout a {
+	color:#FFFFFF;
+}
+#flyout p {
+	color:#FFFFFF;
+}
+
+#flyout:hover{
+	visibility:visible;
+	display: block;
+}
+
+div:hover + #flyout {
+	visibility:visible;
+	display: block;
+	transition:background-color 0.5s ease;
+    -o-transition:background-color 0.5s ease;
+    -webkit-transition:background-color 0.5s ease;
+    -moz-transition:background-color 0.5s ease;
+}
+
+/* home section */
+#home {
+	background: url('../images/home-bg.jpg') 50% 0 repeat-y fixed;
+	background-color:black;
+	color: black;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 100vh;
+	text-align: center;
+}
+#home h2 {
+	letter-spacing: 2px;
+}
+
+/* intro section */
+#intro {
+	padding-top: 80px;
+	padding-bottom: 60px;
+}
+
+/* work section */
+#work {
+	background-color: #ffffff;
+}
+#work .container {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+/* team section */
+#team {
+	background: #202020 url('../images/team-bg.jpg') 50% 0 repeat-y fixed;
+	color: black;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+/* portfolio section */
+#portfolio {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+#portfolio h2 {
+	line-height: 20px;
+}
+
+@media screen and (max-width:980px) {
+#intro h2 {
+	font-size: 26px;
+}
+}
+
+@media (max-width:400px) {
+#home h1 {
+	font-size: 32px;
+}
+#home h2 {
+	font-size: 22px;
+}
+#intro h2 {
+	font-size: 26px;
+}
+}
